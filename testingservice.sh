@@ -1,8 +1,8 @@
 ##Email Adress were 
 sendMailTo="test@test.com"
 HttpStatus=$(curl -I 127.0.0.1 2>/dev/null | head -n 1 | cut -d$' ' -f2)
-abc="test"
-echo "abc = $abc"
+
+
 testServiciupePort=$(netstat -tulpn |grep -E '80|apache2')
 #echo " haha :  $testServiciupePort"
 #echo "Htppstatus  este  $HttpStatus"
@@ -26,5 +26,5 @@ then
 	echo "Http Status $HttpStatus"
 else 
 	echo "Http Status error $HttpStatus"
-#	mail -s "Http error status $HttpStatus" $sendMailTo < /var/log/apache2/error
+#	mail -s "Http error status $HttpStatus" $sendMailTo < /var/log/apache2/errr.log
 fi
